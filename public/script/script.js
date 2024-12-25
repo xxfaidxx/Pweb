@@ -3,9 +3,6 @@ function loadContent(url) {
     // Dapatkan elemen di mana konten akan dimuat
     const container = document.getElementById("container-doc");
 
-    // Tampilkan loading sementara saat data sedang dimuat
-    container.innerHTML = "<p>Loading...</p>";
-
     // Lakukan permintaan HTTP untuk mendapatkan konten dari URL
     fetch(url)
         .then((response) => {
