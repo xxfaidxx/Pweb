@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+body {
+    background-image: url("../images/bg-login.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*-----------------------------------------
+    Main Content
+----------------------------------------*/
+.outer-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-wrapper{
+    width: 80vw;
+    max-width: 650px;
+    height: 70vh;
+    background: #00000080;
+    border-radius: 42px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+/*-----------------------------------------
+    Logo
+----------------------------------------*/
+.login-wrapper .logo-wrapper {
+    height: 160px;
+    width: 160px;
+    margin: 20 0 20 0;
+}
+.login-wrapper .logo-wrapper .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*-----------------------------------------
+    Form Login
+----------------------------------------*/
+.login-wrapper .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+}
+.form-login {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+}
+.form-login form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-login .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-login .input-group input {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    /* font-style: italic; */
+}
+.choose {
+    display: flex;
+    justify-content: space-between;
+}
+.remember-me {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.remember-me input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #ffff;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+.remember-me input[type="checkbox"]:checked {
+    background-color: transparent; /* Tetap transparan */
+}
+.remember-me input[type="checkbox"]:checked::before {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffff;
+    font-size: 16px;
+    /* line-height: 1; */
+}
+.remember-me label{
+    font-size: 14px;
+    cursor: pointer;
+    color: #ffff;
+}
+.forgot-password a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 14px;
+}
+.form-login .login-btn {
+    display: block;
+    width: 100%;
+    padding: 5px 5px;
+    border: none;
+    outline: none;
+    color: #ffff;
+    background-color: #234df0;
+    cursor: pointer;
+}
+.daftar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+    color: #ffff;
+}
+.daftar-btn a{
+    /* font-size: 14px; */
+    text-decoration: none;
+    color: #ffff;
+    background-color: #234df0;
+    border: 1px solid #234df0;
+    border-radius: 3px;
+    padding: 2px;
+    cursor: pointer;
+}
+.daftar-btn a:hover{
+    cursor: pointer;
+}
