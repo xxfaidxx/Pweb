@@ -32,3 +32,23 @@ Route::get('/berita', function () {
 Route::get('/info', function () {
     return view('nav.info');
 });
+
+Route::get('/hasil', function () {
+    return view('hasil');
+});
+
+Route::get('/sd', function () {
+    return view('jenjang.sd');
+});
+
+Route::get('/smp', function () {
+    return view('jenjang.smp');
+});
+
+Route::get('/sma', function () {
+    return view('jenjang.sma');
+});
+
+Route::get('/infosekolah', function () {
+    return view('infosekolah');
+});

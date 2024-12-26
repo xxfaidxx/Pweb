@@ -6,15 +6,7 @@
 </div>
 
 <div id="content" class="news">
-    <h2>Dokumen</h2>
     <table class="document-table">
-        <thead>
-            <tr>
-                <th>Judul Dokumen</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
         <tbody>
             <tr>
                 <td>SE Gratifikasi PPDB Kota Bekasi 2024</td>

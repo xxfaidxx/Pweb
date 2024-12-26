@@ -30,5 +30,22 @@ document.querySelectorAll(".tab").forEach((tab) => {
         
         // Tambahkan kelas 'active' pada tab yang diklik
         this.classList.add("active");
+
+        // Ambil atribut data-url dan muat konten jika ada
+        const url = this.getAttribute("data-url");
+        if (url) {
+            loadContent(url);
+        }
     });
+});
+
+// Muat konten default untuk tab yang aktif saat halaman pertama kali dimuat
+document.addEventListener("DOMContentLoaded", () => {
+    const activeTab = document.querySelector(".tab.active");
+    if (activeTab) {
+        const url = activeTab.getAttribute("data-url");
+        if (url) {
+            loadContent(url);
+        }
+    }
 });

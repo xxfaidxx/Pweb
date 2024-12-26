@@ -21,8 +21,8 @@
             <div class="nav-links">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">Hasil Seleksi</a></li>
-                    <li><a href="video.html">Info Sekolah</a></li>
+                    <li><a href="/hasil">Hasil Seleksi</a></li>
+                    <li><a href="/infosekolah">Info Sekolah</a></li>
                     <li><a href="/login">Pendaftaran Akun</a></li>
                 </ul>
             </div>
@@ -59,15 +59,7 @@
                     <button class="tab" onclick="loadContent('/info')">Info Praktikal</button>
                 </div>
                 <div id="content" class="news">
-                    <h2>Dokumen</h2>
                     <table class="document-table">
-                        <thead>
-                            <tr>
-                                <th>Judul Dokumen</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
                         <tbody>
                             <tr>
                                 <td>SE Gratifikasi PPDB Kota Bekasi 2024</td>
@@ -97,27 +89,23 @@
         <div id="footer-wrapper">
             <footer class="footer">
                 <div class="footer-container">
-                    <p class="footer-title">Sosial Media dan Website Dinas Pendidikan Kota Bekasi</p>
+                    <p class="footer-title">Sosial Media dan Website Bintang Cendekia</p>
                     <div class="sns">
                         <div class="sns-item">
                             <img src="images/instagram-icon.png" alt="Instagram">
-                            <span>@disdik_kota_bekasi</span>
+                            <span>@bintangcendekia</span>
                         </div>
                         <div class="sns-item">
                             <img src="images/youtube-icon.png" alt="YouTube">
-                            <span>Dinas Pendidikan Kota Bekasi</span>
-                        </div>
-                        <div class="sns-item">
-                            <img src="images/twitter-icon.png" alt="Twitter">
-                            <span>@disdik_bkskota</span>
+                            <span>bintangcendekia</span>
                         </div>
                         <div class="sns-item">
                             <img src="images/website-icon.png" alt="Website">
                             <span><a href="https://disdik.bekasikota.go.id"
-                                    target="_blank">https://disdik.bekasikota.go.id</a></span>
+                                    target="_blank">https://bintangcendikia.com</a></span>
                         </div>
                     </div>
-                    <p class="footer-note">© Official website PPDB Kota Bekasi 2024</p>
+                    <p class="footer-note">© Official website Bintang Cendikia</p>
                 </div>
             </footer>
         </div>
