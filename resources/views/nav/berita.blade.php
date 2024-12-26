@@ -37,5 +37,4 @@
             </tr>
         </tbody>
     </table>
-    <button class="see-more">Lihat Selengkapnya</button>
 </div>
