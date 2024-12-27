@@ -127,21 +127,11 @@ body {
     color: #ffff;
     font-size: 14px;
 }
-.form-login .login-btn {
-    display: block;
-    width: 100%;
-    padding: 5px 5px;
-    border: none;
-    outline: none;
-    color: #ffff;
-    background-color: #234df0;
-    cursor: pointer;
-}
 .daftar-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 14px;
+    gap: 15px;
     font-size: 14px;
     color: #ffff;
 }
