@@ -28,10 +28,6 @@
                         <input type="password" name="password" class="form-control" id="password"
                             placeholder="Password">
                     </div>
-                    <div class="forgot-password mb-3" style="text-align: right">
-                        <a href="#" class="text-decoration-none">Lupa Kata Sandi?</a>
-                    </div>
-
                     <div class="mb-4">
                         <button type="submit" class="btn w-100 space-between"
                             style="background-color: #234df0; color: #ffff; border; none">Login</button>
