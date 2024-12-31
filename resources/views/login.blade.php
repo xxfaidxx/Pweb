@@ -34,7 +34,7 @@
 
                     <div class="mb-4">
                         <button type="submit" class="btn w-100 space-between"
-                            style="background-color: #234df0; color: #ffff; border; none">Submit</button>
+                            style="background-color: #234df0; color: #ffff; border; none">Login</button>
                     </div>
                     <div class="daftar-btn d-flex align-items-center gap-3 text-white">
                         <label class="mb-0">Belum Punya Akun?</label>

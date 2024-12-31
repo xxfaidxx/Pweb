@@ -10,6 +10,7 @@ class AuthController extends Controller
 {
     function showRegistrasi()
     {
+
         return view('registrasi');
     }
 

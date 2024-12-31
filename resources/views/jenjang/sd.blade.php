@@ -1,11 +1,11 @@
-<div id="container-doc" class="container-doc">
-    <div class="tabs">
-        <button class="tab active">SD</button>
-        <button class="tab" onclick="loadContent('/smp')">SMP</button>
-        <button class="tab" onclick="loadContent('/sma')">SMA</button>
-    </div>
+<div class="tabs">
+    <button class="tab active">SD</button>
+    <button class="tab" onclick="loadContent('/smp')">SMP</button>
+    <button class="tab" onclick="loadContent('/sma')">SMA</button>
 </div>
-
-<body>
-    <p>halo ini sd</p>
-</body>
+<table border="1" class="document-table text-center">
+    <tr>
+        <th>halo ini sd</th>
+        <th>halo ini sd</th>
+    </tr>
+</table>

@@ -28,12 +28,6 @@
             </div>
         </div>
         <div id="Body">
-            <div class="search-box">
-                <input type="text"
-                    placeholder="cari data pendaftar berdasarkan NIK, Kode Pendaftaran atau Nama Pendaftar"
-                    class="search-bar">
-                <button class="search-button">Cari</button>
-            </div>
             <div class="info">
                 <div class="g1">
                     <div class="box1">

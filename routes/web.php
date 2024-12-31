@@ -70,3 +70,7 @@ Route::post('/registrasi', [AuthController::class, 'submitRegistrasi'])->name('r
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login.tampil');
 Route::post('/login', [AuthController::class, 'submitLogin'])->name('login.submit');
+
+Route::get('/test', function () {
+    return view('pendaftaran.index');
+});

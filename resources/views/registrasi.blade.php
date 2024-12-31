@@ -20,16 +20,6 @@
                 <form action="{{ route('registrasi.submit') }}" method="post" class="mb-3">
                     @csrf
                     <div class="form-group">
-                        <p class="mb-0">Masukkan Nama Lengkap</p>
-                        <input type="text" name="name" class="form-control" id="name"
-                            aria-describedby="emailHelp" placeholder="Nama Lengkap">
-                    </div>
-                    <div class="form-group">
-                        <p class="mb-0">Masukkan Nama Lengkap</p>
-                        <input type="date" name="date" class="form-control" id="date"
-                            aria-describedby="emailHelp" placeholder="Tanggal Lahir">
-                    </div>
-                    <div class="form-group">
                         <p class="mb-0">Masukkan Email</p>
                         <input type="email" name="email" class="form-control" id="email"
                             aria-describedby="emailHelp" placeholder="Enter email">
