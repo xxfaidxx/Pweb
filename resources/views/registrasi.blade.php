@@ -17,33 +17,33 @@
                 <div class="logo"><img src="images/logo.png"></div>
             </div>
             <div class="form-wrapper">
-                <form action="{{ route('login.submit') }}" method="post" class="mb-3">
+                <form action="{{ route('registrasi.submit') }}" method="post" class="mb-3">
                     @csrf
                     <div class="form-group">
+                        <p class="mb-0">Masukkan Nama Lengkap</p>
+                        <input type="text" name="name" class="form-control" id="name"
+                            aria-describedby="emailHelp" placeholder="Nama Lengkap">
+                    </div>
+                    <div class="form-group">
+                        <p class="mb-0">Masukkan Nama Lengkap</p>
+                        <input type="date" name="date" class="form-control" id="date"
+                            aria-describedby="emailHelp" placeholder="Tanggal Lahir">
+                    </div>
+                    <div class="form-group">
+                        <p class="mb-0">Masukkan Email</p>
                         <input type="email" name="email" class="form-control" id="email"
                             aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-
+                        <p class="mb-0">Masukkan Password</p>
                         <input type="password" name="password" class="form-control" id="password"
                             placeholder="Password">
                     </div>
-                    <div class="forgot-password mb-3" style="text-align: right">
-                        <a href="#" class="text-decoration-none">Lupa Kata Sandi?</a>
-                    </div>
-
                     <div class="mb-4">
                         <button type="submit" class="btn w-100 space-between"
-                            style="background-color: #234df0; color: #ffff; border; none">Submit</button>
-                    </div>
-                    <div class="daftar-btn d-flex align-items-center gap-3 text-white">
-                        <label class="mb-0">Belum Punya Akun?</label>
-                        <a href="/registrasi" class="btn btn-primary btn-sm text-white px-2 py-1">Daftar Sekarang</a>
+                            style="background-color: #234df0; color: #ffff; border; none">Registrasi</button>
                     </div>
                 </form>
-                @if (session('gagal'))
-                    <p class="text-danger text-center">{{ session('gagal') }}</p>
-                @endif
             </div>
         </div>
     </div>

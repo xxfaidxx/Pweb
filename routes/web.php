@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/login', function () {
     return view('login.login');
@@ -52,3 +54,19 @@ Route::get('/sma', function () {
 Route::get('/infosekolah', function () {
     return view('infosekolah');
 });
+
+Route::get('/db-test', function () {
+    try {
+        DB::connection()->getPdo();
+        return "Connected to database: " . DB::connection()->getDatabaseName();
+    } catch (\Exception $e) {
+        return "Database connection error: " . $e->getMessage();
+    }
+});
+
+
+Route::get('/registrasi', [AuthController::class, 'showRegistrasi'])->name('registrasi.tampil');
+Route::post('/registrasi', [AuthController::class, 'submitRegistrasi'])->name('registrasi.submit');
+
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login.tampil');
+Route::post('/login', [AuthController::class, 'submitLogin'])->name('login.submit');

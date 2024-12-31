@@ -23,7 +23,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/hasil">Hasil Seleksi</a></li>
                     <li><a href="/infosekolah">Info Sekolah</a></li>
-                    <li><a href="/login">Pendaftaran Akun</a></li>
+                    <li><a href="/login">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -64,22 +64,18 @@
                             <tr>
                                 <td>SE Gratifikasi PPDB Kota Bekasi 2024</td>
                                 <td><a href="#" class="download">Unduh</a></td>
-                                <td><a href="#" class="share">Bagikan</a></td>
                             </tr>
                             <tr>
                                 <td>Komitmen PPDB Kota Bekasi</td>
                                 <td><a href="#" class="download">Unduh</a></td>
-                                <td><a href="#" class="share">Bagikan</a></td>
                             </tr>
                             <tr>
                                 <td>PERWAL PPDB TAHUN 2024</td>
                                 <td><a href="#" class="download">Unduh</a></td>
-                                <td><a href="#" class="share">Bagikan</a></td>
                             </tr>
                             <tr>
                                 <td>SURAT PERNYATAAN TANGGUNG JAWAB MUTLAK ORANGTUA</td>
                                 <td><a href="#" class="download">Unduh</a></td>
-                                <td><a href="#" class="share">Bagikan</a></td>
                             </tr>
                         </tbody>
                     </table>
