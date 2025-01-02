@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,3 +77,9 @@ Route::post('/login', [AuthController::class, 'submitLogin'])->name('login.submi
 Route::get('/test', function () {
     return view('pendaftaran.index');
 });
+
+Route::get('/profile', [ProfileController::class, 'show'])->name('profile')->middleware('auth');
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/');
+})->name('logout');

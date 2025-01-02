@@ -14,12 +14,19 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->date('date');
+            $table->date('tanggal_lahir');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('jenis_pendaftar');
+            $table->string('asal_sekolah');
+            $table->string('jenjang');
+            $table->string('nik');
+            $table->string('nisn');
+            $table->string('tempat_lahir');
+            $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
         });
     }
 

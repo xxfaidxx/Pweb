@@ -346,3 +346,28 @@ h2 {
         left: -9999px; /* Menyembunyikan header dari tampilan */
     }
 }
+
+/*-----------------------------------------
+    Profile
+----------------------------------------*/
+h2{
+    color: #4169E1;
+    text-align: center;
+}
+.profile-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.profile-container{
+    width: 50%;
+}
+.profile-info .picture-akun{
+    display: flex;
+    justify-content: center;
+    margin: 50px 50px;
+}
+.profile-info .picture-akun img{
+    width: 200px;
+    height: 200px;
+}
