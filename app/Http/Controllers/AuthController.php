@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -81,5 +85,61 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/login');
+    }
+
+    public function showForgotPassword()
+    {
+        return view('auth.forgotpass');
+    }
+
+    public function sendResetLinkEmail(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'nisn' => 'required',
+            'nik' => 'required',
+        ]);
+
+        $user = DB::table('users')
+            ->where('email', $request->email)
+            ->where('nisn', $request->nisn)
+            ->where('nik', $request->nik)
+            ->first();
+
+        if ($user) {
+            Password::sendResetLink(['email' => $request->email]); // Perbaikan penutup kurung
+
+            return response()->json(['message' => 'Tautan reset password telah dikirim ke email Anda.'], 200);
+        }
+
+        return response()->json(['error' => 'Data tidak ditemukan. Pastikan informasi yang Anda masukkan benar.'], 404);
+    }
+
+    public function showResetForm($token)
+    {
+        return view('auth.resetpass', ['token' => $token]);
+    }
+
+    public function resetPassword(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:8',
+            'token' => 'required'
+        ]);
+
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function (User $user, $password) {
+                $user->forceFill([
+                    'password' => bcrypt($password),
+                    'remember_token' => Str::random(60),
+                ])->save();
+            }
+        );
+
+        return $status === Password::PASSWORD_RESET
+            ? redirect()->route('login.tampil')->with('status', __($status))
+            : back()->withErrors(['email' => [__($status)]]);
     }
 }

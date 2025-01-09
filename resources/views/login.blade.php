@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
@@ -21,12 +21,22 @@
                     @csrf
                     <div class="form-group">
                         <input type="email" name="email" class="form-control" id="email"
-                            aria-describedby="emailHelp" placeholder="Enter email">
+                            aria-describedby="emailHelp" placeholder="Enter email"
+                            value="{{ old('email', request()->cookie('email')) }}">
                     </div>
                     <div class="form-group">
-
                         <input type="password" name="password" class="form-control" id="password"
                             placeholder="Password">
+                    </div>
+                    <div class="choose d-flex justify-content-between align-items-center">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" name="remember"
+                                {{ old('remember', request()->cookie('remember')) ? 'checked' : '' }}>
+                            <label for="remember">Ingat Saya?</label>
+                        </div>
+                        <div class="forgot-password">
+                            <a href="\forgot-password">Lupa Kata Sandi?</a>
+                        </div>
                     </div>
                     <div class="mb-4">
                         <button type="submit" class="btn w-100 space-between"
