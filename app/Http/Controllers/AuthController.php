@@ -142,4 +142,22 @@ class AuthController extends Controller
             ? redirect()->route('login.tampil')->with('status', __($status))
             : back()->withErrors(['email' => [__($status)]]);
     }
+
+    public function sd()
+    {
+        $users = User::where('jenjang', 'SD')->get(); // Ambil data jenjang SD
+        return view('jenjang.sd', ['users' => $users]);
+    }
+
+    public function smp()
+    {
+        $users = User::where('jenjang', 'smp')->get(); // Ambil data jenjang SMP
+        return view('jenjang.smp', ['users' => $users]);
+    }
+
+    public function sma()
+    {
+        $users = User::where('jenjang', 'sma')->get(); // Ambil data jenjang SMA
+        return view('jenjang.sma', ['users' => $users]);
+    }
 }

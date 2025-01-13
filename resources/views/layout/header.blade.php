@@ -3,7 +3,7 @@
         <div class="logo-container">
             <img src="images/logo.png" alt="Logo Bintang Cendekia" class="logo">
         </div>
-        <h1>Selamat Datang <br> Bintang Cendekia</h1>
+        <h1>Sekolah Bintang Cendekia</h1>
     </div>
     <div>
         <div class="container">

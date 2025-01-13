@@ -10,32 +10,27 @@
                 <button class="tab" onclick="loadContent('/smp')">SMP</button>
                 <button class="tab" onclick="loadContent('/sma')">SMA</button>
             </div>
-            <div id="content" class="news">
-                <table class="document-table">
-                    <tbody>
-                        <tr>
-                            <td>SE Gratifikasi PPDB Kota Bekasi 2024</td>
-                            <td><a href="#" class="download">Unduh</a></td>
-                            <td><a href="#" class="share">Bagikan</a></td>
-                        </tr>
-                        <tr>
-                            <td>Komitmen PPDB Kota Bekasi</td>
-                            <td><a href="#" class="download">Unduh</a></td>
-                            <td><a href="#" class="share">Bagikan</a></td>
-                        </tr>
-                        <tr>
-                            <td>PERWAL PPDB TAHUN 2024</td>
-                            <td><a href="#" class="download">Unduh</a></td>
-                            <td><a href="#" class="share">Bagikan</a></td>
-                        </tr>
-                        <tr>
-                            <td>SURAT PERNYATAAN TANGGUNG JAWAB MUTLAK ORANGTUA</td>
-                            <td><a href="#" class="download">Unduh</a></td>
-                            <td><a href="#" class="share">Bagikan</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Created At</th>
+                    <th>Asal</th>
+                    <th>Jenis Kelamin</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($users as $user)
+                    <tr>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->created_at }}</td>
+                        <td>{{ $user->asal_sekolah }}</td>
+                        <td>{{ $user->jenis_kelamin }}</td>
+                        <td>{{ $user->jenjang }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
         </div>
     @endsection
 </body>

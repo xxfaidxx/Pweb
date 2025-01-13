@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 use Symfony\Component\HttpKernel\Profiler\Profile;
 
 /*
@@ -39,16 +40,17 @@ Route::get('/info', function () {
 });
 
 Route::get('/hasil', function () {
-    return view('hasil');
+    // Ambil data dari database dengan jenjang 'SD'
+    $users = User::where('jenjang', 'SD')->get();
+
+    // Kirim data ke view 'hasil'
+    return view('hasil', compact('users'));
 });
 
-Route::get('/sd', function () {
-    return view('jenjang.sd');
-});
+Route::get('/sd', [AuthController::class, 'sd']);
 
-Route::get('/smp', function () {
-    return view('jenjang.smp');
-});
+
+Route::get('/smp', [AuthController::class, 'smp']);
 
 Route::get('/sma', function () {
     return view('jenjang.sma');
