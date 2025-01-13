@@ -23,7 +23,11 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/hasil">Hasil Seleksi</a></li>
                     <li><a href="/infosekolah">Info Sekolah</a></li>
-                    <li><a href="/login">Pendaftaran Akun</a></li>
+                    @if (Auth::check())
+                        <li><a href="/profile">{{ Auth::user()->name }}</a></li>
+                    @else
+                        <li><a href="/login">Login</a></li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -67,7 +71,7 @@
                 <p class="footer-title">Sosial Media dan Website Bintang Cendekia</p>
                 <div class="sns">
                     <div class="sns-item">
-                        <img src="images/instagram-icon.png" alt="Instagram">
+                        <img src="images/instagram.png" alt="Instagram">
                         <span>@bintangcendekia</span>
                     </div>
                     <div class="sns-item">

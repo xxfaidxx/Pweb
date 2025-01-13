@@ -86,11 +86,11 @@
                     <p class="footer-title">Sosial Media dan Website Bintang Cendekia</p>
                     <div class="sns">
                         <div class="sns-item">
-                            <img src="images/instagram-icon.png" alt="Instagram">
+                            <img src="/images/instagram.png" alt="Instagram">
                             <span>@bintangcendekia</span>
                         </div>
                         <div class="sns-item">
-                            <img src="images/youtube-icon.png" alt="YouTube">
+                            <img src="/images/youtube (1).png" alt="YouTube">
                             <span>bintangcendekia</span>
                         </div>
                         <div class="sns-item">

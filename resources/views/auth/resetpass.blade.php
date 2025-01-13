@@ -105,10 +105,13 @@
             <div class="form-wrapper">
                 <h1 class>Reset Password</h1>
                 <p>Silahkan isi Password anda yang baru.</p>
-                <form id="resetPassForm">
+                <form id="resetPassForm" action="{{ route('password.update') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="token" value="{{ request('token') }}">
                     <div class="form-group">
                         <label for="email">Email Address:</label>
-                        <input type="email" id="email" class="form-control" name="email" required>
+                        <input type="email" id="email" class="form-control" name="email"
+                            value="{{ request('email') }}" required>
                     </div>
                     <div class="form-group">
                         <label for="password">New Password:</label>

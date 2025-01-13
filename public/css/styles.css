@@ -371,3 +371,28 @@ h2{
     width: 200px;
     height: 200px;
 }
+/*-------------
+    Info PPDB 
+---------------*/
+.news img.ppdb {
+    max-width: 70%;  /* Pastikan gambar tidak melebihi lebar kontainer */
+    height: auto;    /* Pertahankan rasio aspek gambar */
+    margin: 0 auto;  /* Pusatkan gambar secara horizontal */
+    display: block;  /* Agar gambar menjadi elemen blok untuk pengaturan margin */
+    border-radius: 10px;  /* Membuat sudut gambar lebih lembut */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Efek bayangan untuk kedalaman */
+}
+#content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#content img {
+    max-width: 45%; /* Mengatur lebar gambar agar tidak terlalu besar */
+    height: auto;
+}
+
+#content .ppdb {
+    margin-right: 10px; /* Memberikan jarak antara gambar */
+}
