@@ -10,27 +10,31 @@
                 <button class="tab" onclick="loadContent('/smp')">SMP</button>
                 <button class="tab" onclick="loadContent('/sma')">SMA</button>
             </div>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Created At</th>
-                    <th>Asal</th>
-                    <th>Jenis Kelamin</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($users as $user)
+            <table border="1" cellpadding="5" cellspacing="0">
+                <thead>
                     <tr>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->created_at }}</td>
-                        <td>{{ $user->asal_sekolah }}</td>
-                        <td>{{ $user->jenis_kelamin }}</td>
-                        <td>{{ $user->jenjang }}</td>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Created At</th>
+                        <th>Asal Sekolah</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Jenjang</th> <!-- Menambahkan kolom Jenjang -->
                     </tr>
-                @endforeach
-            </tbody>
+                </thead>
+                <tbody>
+                    <!-- Loop untuk menampilkan data pengguna -->
+                    @foreach ($users as $user)
+                        <tr>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->created_at }}</td>
+                            <td>{{ $user->asal_sekolah }}</td>
+                            <td>{{ $user->jenis_kelamin }}</td>
+                            <td>{{ $user->jenjang }}</td> <!-- Menampilkan Jenjang -->
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     @endsection
 </body>
