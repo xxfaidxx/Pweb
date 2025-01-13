@@ -384,15 +384,30 @@ h2{
 }
 #content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5em;
 }
-
 #content img {
-    max-width: 45%; /* Mengatur lebar gambar agar tidak terlalu besar */
+    max-width: 47%; /* Mengatur lebar gambar agar tidak terlalu besar */
     height: auto;
 }
 
 #content .ppdb {
     margin-right: 10px; /* Memberikan jarak antara gambar */
 }
+
+#content.infob {
+    display: flex;              /* Mengaktifkan Flexbox */
+    justify-content: center;    /* Pusatkan secara horizontal */
+    align-items: center;        /* Pusatkan secara vertikal */
+    /* height: 170vh;              Menetapkan tinggi 100% dari viewport untuk pemusatan vertikal penuh */
+    border-radius: 50px;        /* Membuat sudut gambar lebih lembut */
+    margin: 10px 0;             /* Memberikan jarak atas dan bawah */
+}
+
+#content.infob img {
+   border-radius: 25px;
+}
+

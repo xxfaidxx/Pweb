@@ -4,6 +4,6 @@
         Seputar PPDB 2024</button>
     <button class="tab" onclick="loadContent('/info')">Info Praktikal</button>
 </div>
-<div id="content" class="news">
-    <img src="/images/ppdbbintang.png" alt="ppdb" class="ppdb">
+<div id="content" class="infob">
+    <img src="/images/ppdbbintang.png" alt="ppdb" class="infob">
 </div>
