@@ -1,9 +1,7 @@
-<div id="container-doc" class="container-doc">
-    <div class="tabs">
-        <button class="tab" onclick="loadContent('/sd')">SD</button>
-        <button class="tab" onclick="loadContent('/smp')">SMP</button>
-        <button class="tab active" onclick="loadContent('/sma')">SMA</button>
-    </div>
+<div class="tabs">
+    <button class="tab" onclick="loadContent('/sd')">SD</button>
+    <button class="tab" onclick="loadContent('/smp')">SMP</button>
+    <button class="tab active" onclick="loadContent('/sma')">SMA</button>
 </div>
 <table border="1" cellpadding="15" cellspacing="0" cellmargin="2" width="100%" style="margin: 0 auto;">
     <thead>

@@ -24,7 +24,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/login', function () {
-    return view('login.login');
+    return view('login');
 });
 
 Route::get('/dokumen', function () {
@@ -52,9 +52,11 @@ Route::get('/sd', [AuthController::class, 'sd']);
 
 Route::get('/smp', [AuthController::class, 'smp']);
 
-Route::get('/sma', function () {
-    return view('jenjang.sma');
-});
+Route::get('/sma', [AuthController::class, 'sma']);
+
+// Route::get('/sma', function () {
+//     return view('jenjang.sma');
+// });
 
 Route::get('/infosekolah', function () {
     return view('infosekolah');
@@ -81,6 +83,7 @@ Route::get('/test', function () {
 });
 
 Route::get('/profile', [ProfileController::class, 'show'])->name('profile')->middleware('auth');
+Route::post('/update-profile', [ProfileController::class, 'updateProfile'])->name('profile.update');
 Route::post('/logout', function () {
     Auth::logout();
     return redirect('/');

@@ -31,6 +31,7 @@ class CreateUsersTable extends Migration
             $table->timestamps(); // includes created_at and updated_at
             $table->string('password_reset_token', 255)->nullable(); // renamed to standard
             $table->dateTime('password_reset_expired_at')->nullable(); // renamed to standard
+            $table->string('profile_picture')->nullable();
         });
     }
     /**
