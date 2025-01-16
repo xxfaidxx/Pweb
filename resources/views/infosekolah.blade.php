@@ -4,4 +4,8 @@
 
 <body>
     @section('content')
-    </body>
+        <div class="info">
+            <img src="{{ asset('images/Fasilitas Sekolah.png') }}" alt="Fasilitas Sekolah">
+        </div>
+    @endsection
+</body>

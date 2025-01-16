@@ -8,5 +8,4 @@
     <img src="/images/praktikal.jpg" alt="ppdb" class="ppdb">
     <img src="/images/ppdbbintang.png" alt="" class="ppdb">
     <img src="/images/alur pendaftaran ppdb.png" alt="" class="ppdb">
-    <img src="/images/ppdbbintang.png" alt="" class="ppdb">
 </div>

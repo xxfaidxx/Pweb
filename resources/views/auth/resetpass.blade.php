@@ -35,7 +35,7 @@
         .reset-wrapper {
             width: 80vw;
             max-width: 650px;
-            height: 70vh;
+            height: 90vh;
             background: #00000095;
             border-radius: 42px;
             display: flex;
