@@ -107,7 +107,7 @@ class AuthController extends Controller
             ->first();
 
         if ($user) {
-            Password::sendResetLink(['email' => $request->email]); // Perbaikan penutup kurung
+            Password::sendResetLink(['email' => $request->email]);
 
             return response()->json(['message' => 'Tautan reset password telah dikirim ke email Anda.'], 200);
         }

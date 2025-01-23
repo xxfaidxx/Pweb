@@ -53,7 +53,7 @@
                 };
 
                 $.ajax({
-                    url: "{{ route('password.email') }}", // Ganti dengan rute Anda
+                    url: "{{ route('password.email') }}",
                     type: "POST",
                     data: formData,
                     headers: {

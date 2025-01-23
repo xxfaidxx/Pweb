@@ -23,6 +23,7 @@ class ProfileController extends Controller
             $path = $file->store('uploads/profile_pictures', 'public');
             $user->profile_picture = $path;
         }
+        $user->save();
         return redirect()->back()->with('success', 'Profile updated successfully!');
     }
 }

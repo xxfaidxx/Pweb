@@ -11,11 +11,10 @@
             <th style="text-align: center;">Created At</th>
             <th style="text-align: center;">Asal Sekolah</th>
             <th style="text-align: center;">Jenis Kelamin</th>
-            <th style="text-align: center;">Jenjang</th> <!-- Menambahkan kolom Jenjang -->
+            <th style="text-align: center;">Jenjang</th>
         </tr>
     </thead>
     <tbody>
-        <!-- Loop untuk menampilkan data pengguna -->
         @foreach ($users as $user)
             <tr>
                 <td style="text-align: center;">{{ $user->name }}</td>
@@ -23,7 +22,7 @@
                 <td style="text-align: center;">{{ $user->created_at }}</td>
                 <td style="text-align: center;">{{ $user->asal_sekolah }}</td>
                 <td style="text-align: center;">{{ $user->jenis_kelamin }}</td>
-                <td style="text-align: center;">{{ $user->jenjang }}</td> <!-- Menampilkan Jenjang -->
+                <td style="text-align: center;">{{ $user->jenjang }}</td>
             </tr>
         @endforeach
     </tbody>
