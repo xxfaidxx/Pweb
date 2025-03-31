@@ -18,8 +18,9 @@ class AuthController extends Controller
         return view('registrasi');
     }
 
-    function submitRegistrasi(Request $request)
+    public function submitRegistrasi(Request $request)
     {
+        // Validate the incoming request
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
@@ -32,8 +33,10 @@ class AuthController extends Controller
             'tempat_lahir' => 'required|string|max:255',
             'tanggal_lahir' => 'required|date',
             'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
+
         ]);
 
+        // Proceed with storing the user or other logic
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
@@ -47,10 +50,9 @@ class AuthController extends Controller
         $user->tanggal_lahir = $request->tanggal_lahir;
         $user->jenis_kelamin = $request->jenis_kelamin;
 
-
         $user->save();
 
-        return redirect()->route('login.tampil');
+        return redirect()->route('login.tampil')->with('success', 'Registrasi berhasil');
     }
 
     function showLogin()

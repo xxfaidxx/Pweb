@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b96ab76958bd48f71fe14b428c7fea7",
+    "content-hash": "8e8001c802e05417ffd8cc17e9d4efcb",
     "packages": [
         {
             "name": "brick/math",
@@ -5727,6 +5727,124 @@
                 }
             ],
             "time": "2024-11-08T15:28:48+00:00"
+        },
+        {
+            "name": "tenancy/tenancy",
+            "version": "v2.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tenancy/tenancy.git",
+                "reference": "384521a8c7c26e8f19893fc4f80fe2432ddfcbf1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tenancy/tenancy/zipball/384521a8c7c26e8f19893fc4f80fe2432ddfcbf1",
+                "reference": "384521a8c7c26e8f19893fc4f80fe2432ddfcbf1",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^3.3 | ^4.0",
+                "laravel/framework": "^9.0 | ^10.0 | ^11.0"
+            },
+            "replace": {
+                "tenancy/affects-broadcasts": "self.version",
+                "tenancy/affects-cache": "self.version",
+                "tenancy/affects-configs": "self.version",
+                "tenancy/affects-connections": "self.version",
+                "tenancy/affects-filesystems": "self.version",
+                "tenancy/affects-logs": "self.version",
+                "tenancy/affects-mails": "self.version",
+                "tenancy/affects-models": "self.version",
+                "tenancy/affects-routes": "self.version",
+                "tenancy/affects-urls": "self.version",
+                "tenancy/affects-views": "self.version",
+                "tenancy/db-driver-mysql": "self.version",
+                "tenancy/db-driver-sqlite": "self.version",
+                "tenancy/framework": "self.version",
+                "tenancy/hooks-database": "self.version",
+                "tenancy/hooks-migration": "self.version",
+                "tenancy/identification-driver-console": "self.version",
+                "tenancy/identification-driver-environment": "self.version",
+                "tenancy/identification-driver-http": "self.version",
+                "tenancy/identification-driver-queue": "self.version",
+                "tenancy/testing": "self.version"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.9",
+                "laravel/laravel": "*",
+                "mockery/mockery": "^1.5.0",
+                "phpunit/phpunit": "^9.0 | ^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Tenancy": "Tenancy\\Facades\\Tenancy"
+                    },
+                    "providers": [
+                        "Tenancy\\Providers\\TenancyProvider",
+                        "Tenancy\\Affects\\Broadcasts\\Provider",
+                        "Tenancy\\Affects\\Cache\\Provider",
+                        "Tenancy\\Affects\\Configs\\Provider",
+                        "Tenancy\\Affects\\Connections\\Provider",
+                        "Tenancy\\Affects\\Filesystems\\Provider",
+                        "Tenancy\\Affects\\Logs\\Provider",
+                        "Tenancy\\Affects\\Mails\\Provider",
+                        "Tenancy\\Affects\\Models\\Provider",
+                        "Tenancy\\Affects\\Routes\\Provider",
+                        "Tenancy\\Affects\\URLs\\Provider",
+                        "Tenancy\\Affects\\Views\\Provider",
+                        "Tenancy\\Identification\\Drivers\\Console\\Providers\\IdentificationProvider",
+                        "Tenancy\\Identification\\Drivers\\Environment\\Providers\\IdentificationProvider",
+                        "Tenancy\\Identification\\Drivers\\Http\\Providers\\IdentificationProvider",
+                        "Tenancy\\Identification\\Drivers\\Queue\\Providers\\IdentificationProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tenancy\\": "src/Tenancy",
+                    "Tenancy\\Hooks\\": "src/Hooks",
+                    "Tenancy\\Affects\\": "src/Affects",
+                    "Tenancy\\Database\\Drivers\\": "src/Database",
+                    "Tenancy\\Identification\\Drivers\\": "src/Identification"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arlon Antonius",
+                    "email": "opensource@arlon.dev",
+                    "homepage": "https://arlon.dev"
+                }
+            ],
+            "description": "Creating multi tenant saas from your Laravel app with ease",
+            "keywords": [
+                "aws",
+                "gce",
+                "laravel",
+                "multi-tenant",
+                "saas",
+                "tenancy"
+            ],
+            "support": {
+                "issues": "https://github.com/tenancy/tenancy/issues",
+                "source": "https://github.com/tenancy/tenancy/tree/v2.3.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/tenancy",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/tenancy",
+                    "type": "opencollective"
+                }
+            ],
+            "time": "2024-12-21T09:11:55+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

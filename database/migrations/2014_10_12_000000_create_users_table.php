@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('name', 255);
             $table->string('tempat_lahir', 255);
             $table->date('tanggal_lahir');
-            $table->enum('jenis_kelamin', ['Laki-Laki', 'Perempuan']);
+            $table->enum('jenis_kelamin', ['L', 'P']);
             $table->string('email', 255)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password', 255);
