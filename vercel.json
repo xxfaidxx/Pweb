@@ -33,8 +33,5 @@
         "NODE_PATH": "node",
         "LD_LIBRARY_PATH": "/var/task/lib:/opt/lib:/usr/lib64:/usr/lib",
         "PHPRC": "./php.ini"
-    },
-    "build": {
-        "command": "apt-get update && apt-get install -y libnss3"
     }
 }
