@@ -31,6 +31,7 @@
         "VIEW_COMPILED_PATH": "/tmp/views",
         "SSR_TEMP_PATH": "/tmp/ssr",
         "NODE_PATH": "node",
-        "LD_LIBRARY_PATH": "/var/task/lib:/opt/lib:/usr/lib64:/usr/lib"
+        "LD_LIBRARY_PATH": "/var/task/lib:/opt/lib:/usr/lib64:/usr/lib",
+        "PHPRC": "./php.ini"
     }
 }
